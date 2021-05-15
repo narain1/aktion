@@ -1,7 +1,7 @@
-import __hello__
 import os
+import subprocess
+from tqdm.auto import tqdm
 
-for i in os.listdir(os.getcwd()):
-    print(i)
+for file in tqdm(os.listdir(os.cwd())):
+    if file.endswith('.ipynb'): subprocess.run("jupyter nbconvert --to notebook --execute {file} --output {file}")
 
-print('12345')
