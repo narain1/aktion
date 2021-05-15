@@ -1,3 +1,5 @@
 import __hello__
+import os
 
-for i in range(10): print(i)
+for i in os.listdir(os.getcwd()):
+    print(i)
