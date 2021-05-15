@@ -41,4 +41,5 @@ jobs:
 
         - name: execute py script # run the run.py to get the latest data
           run: |
+            conda install -c conda-forge scikit-learn
             python run.py
