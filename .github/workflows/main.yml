@@ -47,4 +47,4 @@ jobs:
 
         - name: run scripts
           run: |
-            python run.py
+            python3 run.py
