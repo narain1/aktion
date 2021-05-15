@@ -19,7 +19,10 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: "ubuntu-latest"
-    # Steps represent a sequence of tasks that will be executed as part of the job
+
+    defaults:
+      run:
+        shell: bash -l {0}
 
     steps:
         - name: checkout repo content
@@ -46,5 +49,6 @@ jobs:
             conda install -c conda-forge tqdm
 
         - name: run scripts
+          shell: bash -l {0}
           run: |
-            python3 run.py
+            python run.py
