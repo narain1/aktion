@@ -1,7 +1,7 @@
 import os
 import subprocess
-from tqdm.auto import tqdm
+from sklearn.model_selection import KFold
 
-for file in tqdm(os.listdir(os.cwd())):
+for file in os.listdir(os.cwd()):
     if file.endswith('.ipynb'): subprocess.run("jupyter nbconvert --to notebook --execute {file} --output {file}")
 
