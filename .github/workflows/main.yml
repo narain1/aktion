@@ -41,8 +41,9 @@ jobs:
 
         - name: install dependencies
           run: |
-            conda install -c conda-forge scikit-learn, tqdm
+            conda install -c conda-forge scikit-learn
             conda install -c anaconda jupyter
+            conda install -c conda-forge tqdm
 
         - name: run scripts
           run: |
