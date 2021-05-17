@@ -5,4 +5,5 @@ from tqdm.auto import tqdm
 
 for file in tqdm(os.listdir(os.getcwd())):
     if file.endswith('.ipynb'):
+        print(file)
         subprocess.run("jupyter nbconvert --to notebook --execute {file} --output {file}".split())
